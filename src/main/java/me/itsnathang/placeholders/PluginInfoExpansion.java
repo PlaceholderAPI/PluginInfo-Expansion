@@ -75,8 +75,13 @@ public class PluginInfoExpansion extends PlaceholderExpansion {
         if (placeholder.startsWith("softdepends_"))
             return plugin.getDescription().getSoftDepend().toString();
 
-        if (placeholder.startsWith("permissions_"))
-            return plugin.getDescription().getPermissions().toString();
+        if (placeholder.startsWith("permissions_")) {
+            StringBuilder builder = new StringBuilder();
+            plugin.getDescription().getPermissions().forEach((permission) ->
+                builder.append(permission.getName()).append(", ")
+            );
+            return builder.toString();
+        }
 
         return null;
     }
