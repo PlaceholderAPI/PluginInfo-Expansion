@@ -4,7 +4,9 @@ PluginInfo is an expansion for the plugin [PlaceholderAPI](https://www.spigotmc.
 
 ### Installation
 
-Simply drop the `Expansion-PluginInfo.jar` file into `plugins/PlaceHolderAPI/expansions` and then reload PlaceholderAPI.
+Simply issue the command `/papi ecloud download PluginInfo`.
+
+Alternatively, download and drop the `Expansion-PluginInfo.jar` file into `plugins/PlaceHolderAPI/expansions` and then reload PlaceholderAPI.
 
 ### Usage
 
