@@ -2,7 +2,7 @@ package me.itsnathang.placeholders;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.Plugin;
 
 public class PluginInfoExpansion extends PlaceholderExpansion {
@@ -23,7 +23,7 @@ public class PluginInfoExpansion extends PlaceholderExpansion {
     }
 
     @Override
-    public String getPlugin() {
+    public String getRequiredPlugin() {
         return null;
     }
 
@@ -33,7 +33,7 @@ public class PluginInfoExpansion extends PlaceholderExpansion {
     }
 
     @Override
-    public String onPlaceholderRequest(Player player, String identifier) {
+    public String onRequest(OfflinePlayer player, String identifier) {
         String placeholder = identifier.toLowerCase();
         String pluginName  = identifier.replaceAll(".+_", "");
         Plugin plugin      = Bukkit.getServer().getPluginManager().getPlugin(pluginName);
